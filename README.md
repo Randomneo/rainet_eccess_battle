@@ -10,9 +10,19 @@ Web implementation of Stains;Gate board/card game.
 
     docker-compose build
 
-3. Run web service
+3. Add .env file to contain following values:
+
+    BE_INNER_UVICORN_PORT=8080
+    RUNNING_MODE=DEVELOPMENT/SANDBOX/PRODUCTION
+
+4. Run web service
 
     docker-compose up
+
+5. Run backend tests with
+
+    docker-compose exec backend pytest
+
 
 By default server will start in development mode on localhost
 
